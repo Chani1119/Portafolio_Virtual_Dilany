@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb0f7;
+}
+
+.hero {
+  height: 100vh;
+  background: url('/img/zoe.gif') no-repeat center center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 80%, 0 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  transform: translateY(-50px);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #ffe3f9;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f0c8ff;
+}
+
+.intro-section {
+  background:
+    radial-gradient(circle at top left, transparent 9%, #ffa1f7 10%, #ffa1f7 15%, transparent 16%),
+    radial-gradient(circle at bottom left, transparent 9%, #ffa1f7 10%, #ffa1f7 15%, transparent 16%),
+    radial-gradient(circle at top right, transparent 9%, #ffa1f7 10%, #ffa1f7 15%, transparent 16%),
+    radial-gradient(circle at bottom right, transparent 9%, #ffa1f7 10%, #ffa1f7 15%, transparent 16%),
+    radial-gradient(circle, transparent 25%, #ffffff 26%),
+    linear-gradient(45deg, transparent 46%, #ffa1f7 47%, #ffa1f7 52%, transparent 53%),
+    linear-gradient(135deg, transparent 46%, #ffa1f7 47%, #ffa1f7 52%, transparent 53%);
+  background-size: 3em 3em;
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #fff0fa;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  color: #d14edb;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: #5a236a;
+  line-height: 1.6;
+}
+
+.intro-img {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-img img {
+  max-width: 390px;
+  border-radius: 20px;
+  border: 4px solid #ffa1f7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.boton-proyectos {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff8ee0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-proyectos:hover {
+  background-color: #e974cc;
+  transform: scale(1.05);
+}
+
+.preview-habilidades {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.preview-habilidades h2 {
+  font-size: 2.2rem;
+  color: #d14edb;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 220px;
+  height: 280px;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card-center {
+  width: 260px;
+  height: 320px;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s;
+  background-color: #ffa1f7;
+  color: white;
+}
+
+.card-front {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-size: 1rem;
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.preview-text {
+  font-size: 1.1rem;
+  color: #5a236a;
+  margin-bottom: 20px;
+}
+
+.seccion-contacto-preview {
+  background: linear-gradient(135deg, #ffd3f5, #e5b5ff);
+  padding: 80px 20px;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.contacto-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #5a236a;
+}
+
+.contacto-contenido .emoji {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contacto-contenido h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #a128b6;
+}
+
+.contacto-contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #4d2056;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+}
+
+h1, h2, h3, h4 {
+    font-size: 90%;
+  }
+
+  .hero {
+    padding: 60px 20px;
+    background-size: cover;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+.introduccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 15px;
+}
+
+.introduccion .texto {
+  order: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.introduccion img {
+  order: 2;
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+}
+
+  .grid-habilidades {
+    grid-template-columns: 1fr;
+  }
+
+  .capsula {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-proyecto {
+    width: 100%;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px 10px;
+  }

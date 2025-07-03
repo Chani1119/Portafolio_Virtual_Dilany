@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Mi Portafolio</title>
+  <link rel="stylesheet" href="contacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/logo.png" type="image/png">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+    <div class="logo">Mi Portafolio Virtual</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+</header>
+
+<section class="contacto">
+    <h2>¿Deseas contactarme? ✉️</h2>
+    <p>Puedes enviarme un mensaje directo a través del formulario o contactarme en mis redes sociales.</p>
+
+    <form class="formulario-contacto" id="form-contacto" action="https://formsubmit.co/dpamenunez1119@gmail.com" method="POST">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="correo" placeholder="Tu correo" required>
+  <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+  <button type="submit">Enviar mensaje</button>
+
+  <input type="hidden" name="_captcha" value="false">
+</form>
+
+<div id="mensaje-enviado" class="mensaje-exito" style="display: none;">
+  ¡Gracias por tu mensaje! 💖 Me pondré en contacto pronto.
+</div>
+
+    <div class="redes-sociales">
+      <p>O también puedes encontrarme en:</p>
+      <a href="https://www.instagram.com/chani_ily?igsh=NjY5bDNrYXRwenZj" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/Chanynys?locale=es_LA" target="_blank">Facebook</a> |
+      <a href="https://x.com/Chanynys" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+<script src="contacto.js"></script>
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6865df3073c5c6190d0632c4/1iv6uvm22';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+</body>
+</html>

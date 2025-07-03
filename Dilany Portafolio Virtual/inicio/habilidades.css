@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: #ffe3f9;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #5a236a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5a236a;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb0f7;
+}
+
+.habilidades {
+  padding: 60px 20px;
+  background: radial-gradient(circle at 60% 40%, #ffa1f7 12%, transparent 13%),
+              radial-gradient(circle at 40% 60%, #ffa1f780 12%, transparent 13%);
+  background-size: 120px 120px;
+  background-color: #fff7fc;
+  text-align: center;
+}
+
+.habilidades h2 {
+  font-size: 2.5rem;
+  color: #c850c0;
+  margin-bottom: 40px;
+  font-family: 'Comfortaa', cursive;
+  margin-top: 30px;
+}
+
+.subtitulo {
+  font-size: 1.8rem;
+  color: #a445a3;
+  margin: 40px 0 20px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.capsula {
+  background: #ffe0f8;
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(230, 70, 200, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.capsula:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 25px rgba(198, 58, 210, 0.4);
+  background: #ffd6f4;
+}
+
+.icono {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.capsula h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #802e8d;
+}
+
+.capsula p {
+  font-size: 0.95rem;
+  color: #6e3373;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .habilidades h2, .subtitulo {
+    font-size: 1.8rem;
+  }
+
+  .grid-habilidades {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .capsula {
+    width: 100%;
+    padding: 18px 20px;
+  }
+
+  .icono {
+    font-size: 1.8rem;
+  }
+
+  .capsula h4 {
+    font-size: 1.1rem;
+  }
+
+  .capsula p {
+    font-size: 0.9rem;
+  }
+}
